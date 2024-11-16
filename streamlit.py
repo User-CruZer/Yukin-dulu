@@ -5,7 +5,7 @@ st.sidebar.write("# About!")
 st.sidebar.write("waiting for season 2 for real") # Ketik disini mad
 
 st.title("Hello there")
-st.subheader("Welcome")
+st.subheader("Welcome Woy Brader!")
 st.subheader("To cancer detection made by yukin dulu team")
 
 uploaded_files = st.file_uploader(
