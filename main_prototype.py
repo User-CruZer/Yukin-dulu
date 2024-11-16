@@ -5,6 +5,20 @@ st.title("Hello there!")
 st.header("welcome to our prototype")
 st.subheader("made by: Yukin dulu team")
 
+st.write("Petunjuk Upload:")
+st.write("Klik tombol browse file dibawah dan cari foto yang akan diupload")
+st.write("pastikan Foto yang anda upload sejenis dengan gambar berikut:")
+
+col1, col2, col3 = st.columns([1, 1, 1])  
+
+with col1:
+    st.image("Contoh1.jpeg", caption="contoh 1")
+
+with col2:
+    st.image("contoh2.jpeg", caption="contoh 2")
+
+with col3:
+    st.image("contoh3.jpeg", caption="contoh 3")
 
 uploaded_files = st.file_uploader(
     "insert an image", accept_multiple_files=True, type=["png", "jpg"]
