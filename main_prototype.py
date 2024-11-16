@@ -1,5 +1,6 @@
 import streamlit as st
 import streamlit.components.v1 as components
+from PIL import Image
 
 st.title("Hello there!")
 st.header("welcome to our prototype")
@@ -23,6 +24,15 @@ with col3:
 uploaded_files = st.file_uploader(
     "insert an image", accept_multiple_files=True, type=["png", "jpg"]
 )
+
+if uploaded_files:
+    for uploaded_file in uploaded_files:
+        try:
+            # Open and display each image
+            image = Image.open(uploaded_file)
+            st.image(image, caption=f"Uploaded: {uploaded_file.name}", use_container_width=True)
+        except Exception as e:
+            st.error(f"An error occurred with {uploaded_file.name}: {e}")
 
 submitter =  f"{uploaded_files}", st.button("submit image", use_container_width= True)
 
