@@ -1,12 +1,10 @@
 import streamlit as st
 import streamlit.components.v1 as components
 
-st.sidebar.write("# About!")
-st.sidebar.write("waiting for season 2 for real") # Ketik disini mad
+st.title("Hello there!")
+st.header("welcome to our prototype")
+st.subheader("made by: Yukin dulu team")
 
-st.title("Hello there")
-st.subheader("Welcome Woy Brader!")
-st.subheader("To cancer detection made by yukin dulu team")
 
 uploaded_files = st.file_uploader(
     "insert an image", accept_multiple_files=True, type=["png", "jpg"]
