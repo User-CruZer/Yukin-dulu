@@ -35,11 +35,3 @@ if uploaded_files:
             st.error(f"An error occurred with {uploaded_file.name}: {e}")
 
 submitter =  f"{uploaded_files}", st.button("submit image", use_container_width= True)
-
-
-# ChatGpt Masih Error
-chatgpt_url = "https://chat.openai.com/"
-iframe_code = f"""
-    <iframe src="{chatgpt_url}" width="100%" height="800px" frameborder="0"></iframe>
-"""
-components.html(iframe_code, height=200)
